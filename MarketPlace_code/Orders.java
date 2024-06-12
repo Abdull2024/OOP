@@ -15,22 +15,22 @@ public class Orders {
         orders.add(order);
     }
 
-    public void remove(int orderId) {
-        if (orderId >= 0 && orderId < orders.size()) {
-            orders.remove(orderId);
+    public void remove(String itemName) {
+        orders.removeIf(order -> order.getItem().equals(itemName));
+    }
+
+    public Order find(String itemName) {
+        for (Order order : orders) {
+            if (order.getItem().equals(itemName)) {
+                return order;
+            }
         }
+        return null;
     }
 
     public void print() {
         for (Order order : orders) {
             System.out.println(order);
         }
-    }
-
-    public Order find(int orderId) {
-        if (orderId >= 0 && orderId < orders.size()) {
-            return orders.get(orderId);
-        }
-        return null;
     }
 }

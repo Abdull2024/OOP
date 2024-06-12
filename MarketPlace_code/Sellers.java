@@ -1,7 +1,6 @@
 //Name:Moh Mohammed Faisal Hassan 
 //ID:22009298
 
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,12 +19,6 @@ public class Sellers {
         sellers.removeIf(seller -> seller.getId().equals(sellerId));
     }
 
-    public void print() {
-        for (Seller seller : sellers) {
-            System.out.println(seller);
-        }
-    }
-
     public Seller find(String sellerId) {
         for (Seller seller : sellers) {
             if (seller.getId().equals(sellerId)) {
@@ -33,5 +26,11 @@ public class Sellers {
             }
         }
         return null;
+    }
+
+    public void print() {
+        for (Seller seller : sellers) {
+            System.out.println(seller);
+        }
     }
 }

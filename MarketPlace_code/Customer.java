@@ -2,17 +2,36 @@
 //Coder ID: 22012364
 
 
-import java.util.ArrayList;
-import java.util.List;
-
-// Customer class
 class Customer {
-    String name; // Variable to store the customer's name
-    String address; // Variable to store the customer's address
+    private String name;
+    private String address;
 
-    // Constructor
-    Customer(String name, String address) {
-        this.name = name; // Initializing the name variable with the provided name
-        this.address = address; // Initializing the address variable with the provided address
+    // Default constructor
+    public Customer() {
+        this.name = "";
+        this.address = "";
+    }
+
+    // Parameterized constructor
+    public Customer(String name, String address) {
+        this.name = name;
+        this.address = address;
+    }
+
+    // Getters and setters
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 }

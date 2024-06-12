@@ -1,5 +1,5 @@
-//Mohammad Adiyan Alvi
-//ID: 20001611
+//Cpder name: Mohammad Adiyan Alvi
+//ID:20001611
 
 
 import java.util.ArrayList;
@@ -11,8 +11,12 @@ public class Main {
         Items items = new Items();
 
         // Add some Item objects to Items
-        Item item1 = new Item("Laptop", "High performance laptop", 999.99, "Great product", 4.5);
-        Item item2 = new Item("Phone", "Latest smartphone", 799.99, "Excellent phone", 4.7);
+        Item item1 = new Item("Laptop", "High performance laptop", 999.99);
+        Item item2 = new Item("Phone", "Latest smartphone", 799.99);
+        item1.addReview(new Review("Great product", "John"));
+        item1.addRating(4.5);
+        item2.addReview(new Review("Excellent phone", "Alice"));
+        item2.addRating(4.7);
         items.addItem(item1);
         items.addItem(item2);
 
@@ -27,8 +31,8 @@ public class Main {
         Orders orders = new Orders();
 
         // Add some Order objects to Orders
-        Order order1 = new Order("Laptop", 999.99, "2024-06-01", "12:00 PM", customer1.name);
-        Order order2 = new Order("Phone", 799.99, "2024-06-02", "01:00 PM", customer1.name);
+        Order order1 = new Order("Laptop", 999.99, "2024-06-01", "12:00 PM", customer1);
+        Order order2 = new Order("Phone", 799.99, "2024-06-02", "01:00 PM", customer1);
         orders.add(order1);
         orders.add(order2);
 
@@ -58,13 +62,13 @@ public class Main {
         sellers.print();
 
         // Find and remove an order
-        System.out.println("\nFinding and removing order with ID 0:");
-        Order foundOrder = orders.find(0);
+        System.out.println("\nFinding and removing order with item 'Laptop':");
+        Order foundOrder = orders.find("Laptop");
         if (foundOrder != null) {
             System.out.println("Found Order: " + foundOrder);
-            orders.remove(0);
+            orders.remove("Laptop");
         }
-        
+
         // Print all orders after removal
         System.out.println("\nOrders after removal:");
         orders.print();
