@@ -1,3 +1,7 @@
+//Coder name: 1- Abdullah Fouzi Naji, Mohammed Fisal
+//Coder ID: 22012364,  22009298
+
+
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -21,8 +25,8 @@ public class Main extends Application {
         sellers.add(new Seller("Seller A", "1", 4.5, "Good service"));
         sellers.add(new Seller("Seller B", "2", 3.8, "Average service"));
 
-        VBox root = new VBox(0);
-        root.setPadding(new Insets(20));
+        VBox root = new VBox(0); // Create the root layout
+        root.setPadding(new Insets(20)); // Set padding for the root layout
 
         Label nameLabel = new Label("Item Name:");
         TextField nameField = new TextField();
@@ -34,8 +38,8 @@ public class Main extends Application {
         TextField priceField = new TextField();
 
         Button addItemButton = new Button("Add Item");
-        itemListView = new ListView<>();
-        reviewListView = new ListView<>();
+        itemListView = new ListView<>();// List view for items
+        reviewListView = new ListView<>();// List view for reviews
 
         // Section to add reviews and ratings
         Label reviewLabel = new Label("Add Review:");

@@ -1,3 +1,7 @@
+//Coder name: Abdullah Fouzi Naji
+//Coder ID: 22012364
+
+
 public class Review {
     private String text;
     private String reviewer;
